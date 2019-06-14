@@ -6,6 +6,8 @@ export default () => {
 		switch (status) {
 			case 404:
 				return 'not_found'
+			case 403:
+				return 'access_forbidden'
 			case 400:
 				return 'bad_request'
 			default:

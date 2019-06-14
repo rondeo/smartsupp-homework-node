@@ -20,4 +20,9 @@ export class ClientStorage {
 		return res ? JSON.parse(res) : null
 	}
 
+	async deleteClient(id: string): Promise<any> {
+		await this.redis.del(`client:${id}`)
+	}
 }
+
+
